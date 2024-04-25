@@ -1,28 +1,40 @@
-{% extends 'site.html' %}
 
+{% extends 'site.html' %}
 {% block content %}
 
-<h4>Codescout</h4>
-<p>Codescout is an application that can be deployed via containerization for a 
-    specific organization that wishes to have complete control of their IP while 
-    still being able to keep a well documented, widely available, and searchable 
-    database of their IP.
-    
-    Codescout has two primary services as part of it, these are the Codescout 
-    Flask deployment and the PostgreSQL database that facilitates its use. 
-    Additionally there is an Elasticsearch deployment included for demo purposes.
-    Elasticsearch is what gives Codescout the ability to function. In order to 
-    add data and search that data your organization must have an Elasticsearch 
-    cluster setup and connected to Codescout.</p>
-
-<h4>What I Learned</h4>
-
-<ul>
-    <li>ElasticSearch Architecture and Operations</li>
-    <li>Furthered my knowledge of Docker and Docker-Compose, by learning how to automate Docker operation via Docker-Compose.</li>
-    <li>Advanced in SQL operations by learning how relations work in SQL.</li>
-    <li>Solidified my Flask programming.</li>
-    <li>General deployment operations, experimented with Elasticsearch certs and verifying client.</li>
-</ul>
+<section>
+  <div class="jumbotron text-center mt-2" style="background-color: transparent">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Hello, I'm Hank Murdock.</h1>
+          <p>Computer Science Student at Michigan State University</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container text-center">
+    <h1>Experience</h1>
+    <div class="container mt-4 text-center">
+      <a href="{{ url_for('static', filename='files/resume.pdf') }}" download><button class="btn"><i class="fa fa-download"></i> Resume Download</button></a>
+    </div>
+    <div class="row mt-4">
+      <div class="col mt-4"> <a href="https://www.kla.com/" style="text-decoration: none">
+        <div class="card" id="kla">
+          <div class="card-header"><strong style="color: black">KLA Software Intern, Summer 2023</strong></div>
+          <div class="card-img mt-4 mb-4"><img class="rounded-circle" src="{{ url_for('static', filename='kla.jpeg') }}" width="200" height="200" alt="KLA"/></div>
+        </div>
+        </a> </div>
+      <div class="col mt-4"> <a href="https://msu.edu/" style="text-decoration: none">
+        <div class="card" id="michigan-state">
+          <div class="card-header"><strong style="color: black">Teaching Assistant, Data Structures and Algorithms</strong></div>
+          <div class="card-img mt-4 mb-4"><img src="{{ url_for('static', filename='msu.png') }}" width="200" height="200" alt="Michigan State University"/></div>
+        </div>
+        </a> </div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}

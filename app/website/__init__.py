@@ -7,9 +7,6 @@ from pathlib import Path
 
 db = SQLAlchemy()
 
-login_manager = LoginManager()
-login_manager.login_view = 'auth.login'
-
 def create_app():
     app = Flask(__name__)
 
@@ -27,10 +24,6 @@ def create_app():
     print(app.config['SQLALCHEMY_DATABASE_URI'])
 
     db.init_app(app=app)
-    login_manager.init_app(app=app)
-
-    from website.auth.routes import auth
-    app.register_blueprint(auth)
 
     from website.main.routes import main
     app.register_blueprint(main)

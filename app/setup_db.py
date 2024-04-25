@@ -1,7 +1,9 @@
-import app.website.models as models
-from app import app
+import website.models as models
+from website import create_app
 
 def main():
+
+    app = create_app()
 
     with app.app_context():
         models.db.create_all()

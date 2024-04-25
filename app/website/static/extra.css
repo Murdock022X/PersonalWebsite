@@ -57,22 +57,19 @@ div.card:hover {
   outline: none;
   transition: 0.4s;
 }
-
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
   background-color: #808080;
 }
-
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 20px 18px;
   background-color: white;
   display: none;
   overflow: hidden;
-	outline-color: black;
-	outline: auto
+  outline-color: black;
+  outline: auto
 }
-
 .accordion:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
@@ -80,11 +77,11 @@ div.card:hover {
   float: right;
   margin-left: 5px;
 }
-
 .active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
-
 th, td {
-	padding-right: 10px;
+  width: 300px;
+  padding-top: 10px;
+  padding-right: 15px;
 }
