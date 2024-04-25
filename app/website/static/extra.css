@@ -1,0 +1,90 @@
+@charset "utf-8";
+div.card:hover {
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.5);
+}
+/* Style buttons */
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.file {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+.file:hover {
+  background-color: RoyalBlue;
+}
+.zoom {
+  padding: 4px;
+  transition: transform .3s; /* Animation */
+  margin: 0 auto;
+}
+.zoom:hover {
+  transform: scale(1.15); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+#michigan-state:hover {
+  box-shadow: 0 0 7px 3px rgba(24, 69, 59, 0.55);
+}
+#kla:hover {
+  box-shadow: 0 0 7px 3px rgba(65, 0, 127, 0.5);
+}
+#linkedin:hover {
+  box-shadow: 0 0 0 3px rgba(0, 119, 181, 0.75);
+}
+#github:hover {
+  box-shadow: 0 0 0 3px rgba(0, 3, 51, 0.75);
+}
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #808080;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 20px 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+	outline-color: black;
+	outline: auto
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+th, td {
+	padding-right: 10px;
+}

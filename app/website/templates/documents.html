@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Portfolio</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+body {
+    background-image: url();
+}
+</style>
+<link href="extra.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg mt-2"> <a class="navbar-brand zoom mr-5" href="index.html"><img src="../Downloads/Designer.jpeg" class="rounded-circle" width="50" height="50" alt="HM"/></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fa fa-navicon"></i></span> </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item zoom mr-5"><a class="nav-link" href="blog.html" style="color: dodgerblue">
+        <h3>Blog</h3>
+        </a></li>
+      <li class="nav-item zoom mr-5"><a href="documents.html" class="nav-link" style="color: dodgerblue">
+        <h3>Documents</h3>
+        </a></li>
+      <li class="nav-item zoom mr-5"><a href="https://www.linkedin.com/in/henry-murdock/"><img src="../Downloads/LinkedIn_icon_circle.svg.png" id="linkedin" class="rounded-circle" width="50" height="50" alt="LinkedIn"/></a></li>
+      <li class="nav-item zoom mr-5"><a href="https://github.com/Murdock022X"><img src="../Downloads/github-mark/github-mark.png" id="github" class="rounded-circle" width="50" height="50" alt="Github"/></a></li>
+    </ul>
+  </div>
+</nav>
+<section>
+  <div class="jumbotron text-center mt-2" style="background-color: transparent">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Documents</h1>
+          <p>Transcripts, Resume, Papers, Etc.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container text-center justify-content-center"><a><button class="file rounded">Upload (Password Protected) <i class="fa fa-upload"></i></button></a>
+    <table class="rounded mt-5" style="margin-left: auto; margin-right: auto;" border="0">
+      <thead>
+        <tr>
+          <th>Files</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- {% for file in files %} -->
+        <tr>
+          <td><a><button class="file rounded">Filename <i class="fa fa-download"></i></button></td></a>
+          <td>12/22/2024</td>
+        </tr>
+        <!-- {% endfor %} -->
+      </tbody>
+    </table>
+  </div>
+</section>
+<div class="section mt-5">
+  <div class="container">
+    <div class="card">
+      <h5 class="text-center text-muted mt-3">Get In Touch&nbsp;</h5>
+      <address class="text-center">
+      <h2><a href="mailto:hankmurdock@gmail.com">hankmurdock@gmail.com</a></h2>
+      </address>
+    </div>
+  </div>
+</div>
+<hr>
+<footer class="text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p>Copyright © . All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-3.4.1.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.4.1.js"></script>
+</body>
+</html>

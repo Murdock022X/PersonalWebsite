@@ -1,0 +1,19 @@
+services:
+  app:
+    build:
+      context: app
+
+    container_name: app
+
+    image: app
+
+    restart: always
+
+    volumes:
+      - logs
+
+    ports:
+      - "8080:8080"
+
+volumes:
+  logs:
