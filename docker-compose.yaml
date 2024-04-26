@@ -10,7 +10,7 @@ services:
     restart: always
 
     volumes:
-      - logs
+      - logs:/var/log/gunicorn
 
     ports:
       - "8080:8080"

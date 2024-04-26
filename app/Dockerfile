@@ -1,10 +1,22 @@
-FROM python:3.8-slim-buster
+FROM python:slim-buster
 
-#WORKDIR 
+WORKDIR /var
 
-#COPY requirements.txt requirements.txt
-#RUN pip3 install -r requirements.txt
+RUN mkdir app
 
-#COPY . .
+WORKDIR /var/app
 
-#CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+COPY website website
+COPY app.py app.py
+COPY gunicorn_config.py gunicorn_config.py
+COPY requirements.txt requirements.txt
+
+RUN mkdir /var/log/gunicorn
+RUN touch /var/log/gunicorn/gunicorn.access.log
+RUN touch /var/log/gunicorn/gunicorn.error.log
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 8080
+
+CMD ["gunicorn", "app:app", "-c", "gunicorn_config.py"]
